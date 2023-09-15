@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LightBox Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="container">
+
+        <h1>Image Gallery</h1>
+
+        <div class="image-container">
+            <div class="image"><img src="baby.jfif" alt=""></div>
+            <div class="image"><img src="G20_Conference.jfif" alt=""></div>
+            <div class="image"><img src="G20_Summit_2023.jfif" alt=""></div>
+            <div class="image"><img src="horse.jfif" alt=""></div>
+            <div class="image"><img src="Lion.jfif" alt=""></div>
+            <div class="image"><img src="Music1.jfif" alt=""></div>
+            <div class="image"><img src="Musicians_1920x1080.jpg" alt="" width="500"></div>
+
+        </div>
+
+        <div class="popup-image">
+            <span>&times;</span>
+            <img src="horse.jfif" alt="">
+        </div>
+
+    </div>
+
+    <script>
+        document.querySelectorAll('.image-container img').forEach(image =>{
+            image.onclick = () => {
+                const popupImage = document.querySelector('.popup-image img');
+                popupImage.src = image.getAttribute('src');
+                document.querySelector('.popup-image').style.display = 'block';
+            }
+        });
+
+        document.querySelector('.popup-image span').onclick = () => {
+            document.querySelector('.popup-image').style.display = "none";
+        }
+    </script>
+</body>
+</html>
