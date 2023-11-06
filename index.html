@@ -27,7 +27,9 @@
         <div>
             
         </div>
-       
+        <div>
+            Component
+        </div>    
         <div class="popup-image">
             <span>&times;</span>
             <img src="horse.jfif" alt="">
@@ -39,6 +41,7 @@
     <script>
         document.querySelectorAll('.image-container img').forEach(image =>{
             image.onclick = () => {
+                
                 const popupImage = document.querySelector('.popup-image img');
                 popupImage.src = image.getAttribute('src');
                 document.querySelector('.popup-image').style.display = 'block';
